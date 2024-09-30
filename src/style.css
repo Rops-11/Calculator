@@ -42,6 +42,7 @@
   font-weight: bold;
   font-size: 2.5rem;
   font-family: 'Times New Roman';
+  padding: 0 0 0 0.5rem;
 }
 
 .input {
@@ -49,12 +50,12 @@
   height: 4rem;
   text-align: right;
   background-color: #252923;
-  padding: 2rem 2rem 0 2rem;
-  margin: 0;
+  padding: 2rem 2rem 0rem 2rem;
+  margin: 0.5rem 0 1rem 0;
   border-radius: 2rem;
   font-size: 2rem;
   font-family: 'Times New Roman';
-  transition: 1s;
+  border: 1rem solid black;
 }
 
 .buttonContainer {

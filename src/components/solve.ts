@@ -5,13 +5,13 @@ export const solve = (equals: HTMLButtonElement) => {
     // reformatting the input
     for (let i = 0; i < inputValue.length; i++) {
       if (inputValue[i] === 'x') {
-        result += ' * ';
+        result += '*';
       } else if (inputValue[i] === '÷') {
-        result += ' / ';
+        result += '/';
       } else if (inputValue[i] === '+') {
-        result += ' + ';
+        result += '+';
       } else if (inputValue[i] === '-') {
-        result += ' - ';
+        result += '-';
       } else {
         result += inputValue[i];
       }
