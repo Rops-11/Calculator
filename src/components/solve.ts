@@ -2,6 +2,7 @@ export const solve = (equals: HTMLButtonElement) => {
   const solve = () => {
     let inputValue = document.querySelector<HTMLInputElement>('.input')!.value;
     let result = '';
+    // reformatting the input
     for (let i = 0; i < inputValue.length; i++) {
       if (inputValue[i] === 'x') {
         result += ' * ';
@@ -20,7 +21,8 @@ export const solve = (equals: HTMLButtonElement) => {
       // Calculation
       if (document.querySelector<HTMLInputElement>('.input')!.value !== '') {
         document.querySelector<HTMLInputElement>('.input')!.value =
-          eval(result);
+          // rounds off with 4 decimal places
+          (Math.round(eval(result) * 10000) / 10000).toString();
       }
     } catch (error) {
       document.querySelector<HTMLInputElement>('.input')!.value =
