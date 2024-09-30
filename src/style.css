@@ -119,5 +119,11 @@ button {
   border-radius: 1rem;
   background-color: #125237;
   box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 3);
-  opacity: 0.8;
+  opacity: 0.7;
+  transition: 0.6s;
+}
+
+button:hover {
+  opacity: 1;
+  scale: 1.02;
 }
