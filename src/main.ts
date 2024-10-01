@@ -5,7 +5,7 @@ import './style.css';
 
 export const storageKey = 'Calculator';
 export const invalidMultiples: string[] = ['+', '-', 'x', '÷', '.'];
-
+export const forNegative: string[] = ['+', 'x', '÷', '.'];
 
 export type Calculator = {
   active: boolean;

@@ -1,4 +1,4 @@
-import { Calculator, invalidMultiples, storageKey } from '../main';
+import { Calculator, forNegative, invalidMultiples, storageKey } from '../main';
 
 export const valueHandler = (
   grid: HTMLDivElement,
@@ -24,15 +24,20 @@ export const valueHandler = (
             ) === invalidMultiples.includes(button.innerHTML)) === false
         ) {
           input.value += button.innerHTML;
+        } else if (
+          button.innerHTML === '-' &&
+          input.value.charAt(input.value.length - 1) !== '-'
+        ) {
+          input.value += button.innerHTML;
         }
-      } else {
-        if (button.className === 'allClear') {
-          calc.active = true;
-          input.placeholder = '0';
-        }
+      } else if (button.className === 'allClear') {
+        calc.active = true;
+        input.placeholder = '0';  
       }
     }
     localStorage.setItem(storageKey, JSON.stringify(calc));
+    console.log(button.innerHTML === '-');
+    console.log(input.value.charAt(input.value.length - 3) !== '-');
   };
   grid.addEventListener('click', (ev) => {
     addInput(ev);
