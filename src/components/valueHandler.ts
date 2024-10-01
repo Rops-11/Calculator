@@ -1,4 +1,4 @@
-import { Calculator, forNegative, invalidMultiples, storageKey } from '../main';
+import { Calculator, invalidMultiples, storageKey } from '../main';
 
 export const valueHandler = (
   grid: HTMLDivElement,
