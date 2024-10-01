@@ -1,4 +1,4 @@
-import { Calculator, storageKey } from '../main';
+import { Calculator, invalidMultiples, storageKey } from '../main';
 
 export const valueHandler = (
   grid: HTMLDivElement,
@@ -13,7 +13,16 @@ export const valueHandler = (
           input.value = input.value.substring(0, input.value.length - 1);
         } else if (button.className === 'allClear') {
           input.value = '';
-        } else if (input.value.length !== 16) {
+        } else if (
+          input.value.length !== 16 &&
+          // this checks if '+', '-', 'x', '÷', '.' are being repeated and prevents it
+          (invalidMultiples.includes(
+            input.value.charAt(input.value.length - 1)
+          ) &&
+            invalidMultiples.includes(
+              input.value.charAt(input.value.length - 1)
+            ) === invalidMultiples.includes(button.innerHTML)) === false
+        ) {
           input.value += button.innerHTML;
         }
       } else {

@@ -4,6 +4,8 @@ import { valueHandler } from './components/valueHandler';
 import './style.css';
 
 export const storageKey = 'Calculator';
+export const invalidMultiples: string[] = ['+', '-', 'x', '÷', '.'];
+
 
 export type Calculator = {
   active: boolean;
