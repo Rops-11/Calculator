@@ -5,7 +5,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #1a1212;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -49,13 +49,18 @@
   width: 17rem;
   height: 4rem;
   text-align: right;
-  background-color: #252923;
+  background-color: #2e2222;
   padding: 2rem 2rem 0rem 2rem;
   margin: 0.5rem 0 1rem 0;
   border-radius: 2rem;
   font-size: 2rem;
   font-family: 'Times New Roman';
   border: 1rem solid black;
+  transition: 0.8s;
+}
+
+.off {
+  background-color: #171717;
 }
 
 .buttonContainer {

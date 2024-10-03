@@ -27,8 +27,8 @@ export const solve = (equals: HTMLButtonElement) => {
         // Calculation
         if (document.querySelector<HTMLInputElement>('.input')!.value !== '') {
           document.querySelector<HTMLInputElement>('.input')!.value =
-            // rounds off with 4 decimal places
-            (Math.round(eval(result) * 10000) / 10000).toString();
+            // rounds off with 4 decimal places while using the eval function
+            (Math.round(eval(result) * 10000) / 10000).toString(); 
         }
       } catch (error) {
         document.querySelector<HTMLInputElement>('.input')!.value =
@@ -36,12 +36,11 @@ export const solve = (equals: HTMLButtonElement) => {
         setTimeout(
           // Resets the input value
           () =>
-            (document.querySelector<HTMLInputElement>('.input')!.value = ''),
+            (document.querySelector<HTMLInputElement>('.input')!.value = '0'),
           1000
         );
       }
     }
   };
-
   equals.addEventListener('click', () => solve());
 };

@@ -4,7 +4,7 @@ import { valueHandler } from './components/valueHandler';
 import './style.css';
 
 export const storageKey = 'Calculator';
-export const invalidMultiples: string[] = ['+', '-', 'x', '÷', '.'];
+export const invalidMultiples: string[] = ['+', '-', 'x', '÷'];
 
 export type Calculator = {
   active: boolean;
@@ -20,7 +20,7 @@ document.querySelector<HTMLDivElement>('.app')!.innerHTML = /*html*/ `
   <div class="interface">
     <div class="inputContainer">
       <label class='brand'>CASIO</label>
-      <input class='input' placeholder='' disabled/>
+      <input class='input off' disabled/>
     </div>
     <div class='buttonContainer'>
       <div class='communicate'>
